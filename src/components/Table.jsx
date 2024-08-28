@@ -1,12 +1,14 @@
+import './styling.css';
+
 const Table = ({ sat }) => {
   return (
     <table>
     <thead>
      <tr>
-       <th>Name</th>
-       <th>Type of Satellite</th>
-       <th>Launch Date</th>
-       <th>Status</th>
+       <th id="name">Name</th>
+       <th id="type">Type of Satellite</th>
+       <th id="launchDate">Launch Date</th>
+       <th id="operational">Status</th>
      </tr>
      </thead>
      <tbody>
@@ -14,10 +16,10 @@ const Table = ({ sat }) => {
         return (
         <div>
           <tr key={id}>
-          <td>{data.name}</td>
-          <td>{data.typeOfSatellite}</td>
-          <td>{data.launchDate}</td>
-          <td>{data.operational ? "active" : "inactive"}</td>
+          <td headers="name">{data.name}</td>
+          <td headers="type">{data.type}</td>
+          <td headers="launchDate">{data.launchDate}</td>
+          <td headers="operational">{data.operational ? "active" : "inactive"}</td>
           </tr>
         </div>
 );
